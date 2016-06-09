@@ -72,7 +72,7 @@ public class Menu {
                     break;
                 case "ananas": list.add(Pizza.Ingredients.PINEAPPLE);
                     break;
-                case "pilze": list.add(Pizza.Ingredients.MUSHROOMS):
+                case "pilze": list.add(Pizza.Ingredients.MUSHROOMS);
                     break;
                 case "oliven": list.add(Pizza.Ingredients.OLIVES);
                     break;
