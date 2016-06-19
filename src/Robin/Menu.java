@@ -20,7 +20,7 @@ public class Menu {
      * initalizes the menu with content read from csv named "Menu.csv"
      */
     private void initMenu(){
-        File csvFile = new File("Menu.csv");
+        File csvFile = new File("src/Robin/Menu.csv");
         BufferedReader br = null;
         String line;
         String cvsSplitBy = ",";
@@ -54,39 +54,44 @@ public class Menu {
         }
     }
 
+    public List<Pizza> getMenu() {
+        return menu;
+    }
+
     private void fillStandardIngredients(List<Pizza.Ingredients> list, String[] csvContent){
         for(int i = 1; i<csvContent.length - 1; i++){
             String content = csvContent[i].toLowerCase();
             switch(content){
-                case "kaese": list.add(Pizza.Ingredients.CHEESE);
+                case "cheese": list.add(Pizza.Ingredients.CHEESE);
                     break;
                 case "salami": list.add(Pizza.Ingredients.SALAMI);
                     break;
-                case "zwiebeln": list.add(Pizza.Ingredients.ONIONS);
+                case "onions": list.add(Pizza.Ingredients.ONIONS);
                     break;
-                case "knoblauch": list.add(Pizza.Ingredients.GARLIC);
+                case "garlic": list.add(Pizza.Ingredients.GARLIC);
                     break;
-                case "schinken": list.add(Pizza.Ingredients.HAM);
+                case "ham": list.add(Pizza.Ingredients.HAM);
                     break;
-                case "speck": list.add(Pizza.Ingredients.BACON);
+                case "bacon": list.add(Pizza.Ingredients.BACON);
                     break;
-                case "ananas": list.add(Pizza.Ingredients.PINEAPPLE);
+                case "pineapple": list.add(Pizza.Ingredients.PINEAPPLE);
                     break;
-                case "pilze": list.add(Pizza.Ingredients.MUSHROOMS);
+                case "mushrooms": list.add(Pizza.Ingredients.MUSHROOMS);
                     break;
-                case "oliven": list.add(Pizza.Ingredients.OLIVES);
+                case "olives": list.add(Pizza.Ingredients.OLIVES);
                     break;
-                case "paprika": list.add(Pizza.Ingredients.PEPPERS);
+                case "peppers": list.add(Pizza.Ingredients.PEPPERS);
                     break;
-                case "thunfisch": list.add(Pizza.Ingredients.TUNA);
+                case "tuna": list.add(Pizza.Ingredients.TUNA);
                     break;
-                case "tomaten": list.add(Pizza.Ingredients.TOMATO);
+                case "tomato": list.add(Pizza.Ingredients.TOMATO);
                     break;
-                case "pepperoni": list.add(Pizza.Ingredients.CHILIPEPPERS);
+                case "chilipeppers": list.add(Pizza.Ingredients.CHILIPEPPERS);
                     break;
 
             }
         }
+
     }
 }
 

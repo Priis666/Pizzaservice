@@ -33,6 +33,9 @@ public class Order {
      */
     public boolean delPizza(Pizza pizza) {
         //TODO
+        if(order.equals(pizza)!= true){
+            order.remove(pizza);
+        }
         return false;
     }
 

@@ -62,6 +62,16 @@ public class Pizza {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "sort='" + sort + '\'' +
+                ", standardIngredients=" + standardIngredients +
+                ", additionalIngredients=" + additionalIngredients +
+                ", price=" + price +
+                '}';
+    }
+
     /**
      * custom method to compare two lists - used to compare the additionalIngredients
      * @param one list nr.1
@@ -111,5 +121,19 @@ public class Pizza {
         TUNA("Thunfisch"),
         TOMATO("Tomaten"),
         CHILIPEPPERS("Peperoni");
+
+        private final String name;
+
+        private Ingredients(String s) {
+            name = s;
+        }
+
+        public boolean equalsName(String otherName) {
+            return otherName != null && name.equals(otherName);
+        }
+
+        public String toString() {
+            return this.name;
+        }
     }
 }
