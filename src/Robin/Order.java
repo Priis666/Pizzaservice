@@ -33,7 +33,7 @@ public class Order {
      */
     public boolean delPizza(Pizza pizza) {
         //TODO
-        if(order.equals(pizza)!= true){
+        if(order.contains(pizza) == true){
             order.remove(pizza);
         }
         return false;
