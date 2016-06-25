@@ -1,5 +1,6 @@
 package Robin;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,10 +8,12 @@ import java.util.List;
  * Created by Robin on 01.06.2016.
  */
 public class Order {
+    public static Order ORDER = new Order();
 
     private double endPrice;
     private List<Pizza> order;
 
+    //prevent instantiation
     private Order() {
         order = new ArrayList<>();
         endPrice = 0;
@@ -32,7 +35,6 @@ public class Order {
      * @return true if deleting was successful, false if pizza wasn´t in the list
      */
     public boolean delPizza(Pizza pizza) {
-
         if(order.contains(pizza)){
             order.remove(pizza);
         }
@@ -40,6 +42,7 @@ public class Order {
     }
 
     public double getEndPrice() {
+
         for (Pizza pizza : order) {
             endPrice = endPrice + pizza.getPrice();
         }
@@ -47,7 +50,9 @@ public class Order {
     }
 
     public List<Pizza> getPizzaList(){
-        return this.order;
+        return order;
     }
+
+
 
 }
