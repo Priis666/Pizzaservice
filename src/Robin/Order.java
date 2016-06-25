@@ -32,8 +32,8 @@ public class Order {
      * @return true if deleting was successful, false if pizza wasn´t in the list
      */
     public boolean delPizza(Pizza pizza) {
-        //TODO
-        if(order.contains(pizza) == true){
+
+        if(order.contains(pizza)){
             order.remove(pizza);
         }
         return false;

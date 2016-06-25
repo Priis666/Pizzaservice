@@ -98,8 +98,11 @@ public class Pizza {
     }
     public double getPrice(){ return price;}
 
-
-    private double computePizzaPrice(){
+    /**
+     * Adds the price of a pizza with the prices of the additional ingredients on that pizza
+     * @return price of one pizza
+     */
+    public double computePizzaPrice(){
         double additionalPrice = 0;
         if(additionalIngredients.size() != 0){
             additionalPrice = additionalIngredients.size() * INGPRICE;
