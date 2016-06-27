@@ -64,12 +64,12 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "sort='" + sort + '\'' +
-                ", standardIngredients=" + standardIngredients +
-                ", additionalIngredients=" + additionalIngredients +
-                ", price=" + price +
-                '}';
+        return "Pizza: " +
+                sort +
+                ", Standard Zutaten =" + standardIngredients +
+                ", Zusätzliche Zutaten =" + additionalIngredients +
+                ", Preis = " + price
+                ;
     }
 
     /**

@@ -11,13 +11,15 @@ public class Customer {
     private String city;
     private String street;
     private int housenumber;
+    private int zipcode;
 
-    public Customer(String name, String surname, String city, String street, int housenumber) {
+    public Customer(String name, String surname, String city, String street, int housenumber, int zipcode) {
         this.name = name;
         this.surname = surname;
         this.city = city;
         this.street = street;
         this.housenumber = housenumber;
+        this.zipcode = zipcode;
     }
 
     public String getName(){
@@ -39,4 +41,6 @@ public class Customer {
     public int getHousenumber() {
         return housenumber;
     }
+
+    public int getZipcode(){ return zipcode;}
 }

@@ -59,7 +59,7 @@ public class Menu {
     }
 
     private void fillStandardIngredients(List<Pizza.Ingredients> list, String[] csvContent){
-        for(int i = 1; i<csvContent.length - 1; i++){
+        for(int i = 1; i<csvContent.length; i++){
             String content = csvContent[i].toLowerCase();
             switch(content){
                 case "cheese": list.add(Pizza.Ingredients.CHEESE);
